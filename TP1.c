@@ -1,20 +1,23 @@
 #include <stdio.h>
 #include <stdlib.h>
+#define abs(x) (x)<0?-(x):(x)
 int factorial(int );
 int combinatoria (int , int );
 float potenciar (float ,int );
 float exponencial (int , float );
 float raizcuadrada(float ,float );
+float seno(float , float );
+void clasifnatural (int );
 int main()
 {int numn,numm,x;
  float numd,TOL,a;
- /*Factorial
+ /*Ej 1:Factorial
  printf("Inserte el numero deseado (natural): ");
  scanf("%d",&numn);
  printf("%d! = %d\n",numn,factorial(numn));
  getch();
 
- /*Combinatoria
+ /*Ej 2:Combinatoria
  do
  {printf("Inserte el numero n (entero positivo o 0): ");
  scanf("%d",&numn);
@@ -23,7 +26,7 @@ int main()
  }while(numm<numn||numn<0);
  printf("Combinatoria de m con n = %d",combinatoria(numm,numn));
  */
- /*e^x*/
+ /*Ej 3:e^x
 
  printf("Inserte el valor al cual elevar el numero e: ");
  scanf("%d",&x);
@@ -31,8 +34,8 @@ int main()
  scanf("%f",&TOL);
  numd=exponencial(x,TOL);
  printf("e elevado a %d = %f",x,numd);
-
- /*Raiz cuadrada
+ */
+ /*Ej 4:Raiz cuadrada
  printf("Inserte el valor al cual calcular su raiz cuadrada: ");
  scanf("%f",&a);
  printf("Inserte el valor de la tolerancia para el calculo: ");
@@ -40,12 +43,23 @@ int main()
  numd=raizcuadrada(a,TOL);
  printf("Raiz cuadrada de %f = %f",a,numd);
  */
- /*Fibonacci
+ /*Ej 5:Fibonacci
  printf("Inserte un entero para buscar en la serie Fibonacci: ");
  scanf("%d",&numn);
  x=fibonacci(numn);
  printf("%s %d en la serie",x?"Se encontro a":"No se encontro a",numn);
+*/
+ /*Ej 6:Seno(x)
+ printf("Inserte el valor al cual calcular su seno: ");
+ scanf("%f",&a);
+ printf("Inserte el valor de la tolerancia para el calculo: ");
+ scanf("%f",&TOL);
+ printf("sen(%f) = %f",a,seno(a,TOL));
  */
+ /*Ej 7: Clasificar natural (perfecto, deficiente o abundante*/
+ printf("Inserte el numero natural a clasificar: ");
+ scanf("%d",&x);
+ clasifnatural(x);
 }
 
 int factorial(int n)
@@ -113,4 +127,27 @@ int fibonacci (int val)
      b=a+b;
     }
  return (val==a||val==b?1:0);
+}
+
+float seno(float a, float TOL)
+{float res=TOL,resf=a;
+ int fn=-1,n=3;
+ while (abs(res)>=TOL)
+    {res=((fn*potenciar(a,n))/factorial(n));
+     fn=(fn==-1?1:-1);
+     n+=2;
+     resf+=res;
+    }
+    return resf;
+}
+
+void clasifnatural (int n)
+{int sum=0,i;
+ if(n==1) //Esto se debe a que, si uso el n/2, 1 es deficiente porque 1>0.5
+    printf("El numero %d es perfecto"); //y si quito el n/2 pierdo eficiencia
+ else
+    {for(i=1;i<=n/2;i++)
+     sum+=(n%i==0?i:0);
+     printf("El numero %d es %s",n,sum>n?"abundante":sum<n?"deficiente":"perfecto");
+    }
 }
