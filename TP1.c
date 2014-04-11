@@ -8,13 +8,13 @@ float raizcuadrada(float ,float );
 int main()
 {int numn,numm,x;
  float numd,TOL,a;
- /*Factorial*/
+ /*Factorial
  printf("Inserte el numero deseado (natural): ");
  scanf("%d",&numn);
  printf("%d! = %d\n",numn,factorial(numn));
  getch();
 
- /*Combinatoria */
+ /*Combinatoria
  do
  {printf("Inserte el numero n (entero positivo o 0): ");
  scanf("%d",&numn);
@@ -22,7 +22,7 @@ int main()
  scanf("%d",&numm);
  }while(numm<numn||numn<0);
  printf("Combinatoria de m con n = %d",combinatoria(numm,numn));
-
+ */
  /*e^x*/
 
  printf("Inserte el valor al cual elevar el numero e: ");
@@ -32,20 +32,20 @@ int main()
  numd=exponencial(x,TOL);
  printf("e elevado a %d = %f",x,numd);
 
- /*Raiz cuadrada */
+ /*Raiz cuadrada
  printf("Inserte el valor al cual calcular su raiz cuadrada: ");
  scanf("%f",&a);
  printf("Inserte el valor de la tolerancia para el calculo: ");
  scanf("%f",&TOL);
  numd=raizcuadrada(a,TOL);
  printf("Raiz cuadrada de %f = %f",a,numd);
-
- /*Fibonacci */
+ */
+ /*Fibonacci
  printf("Inserte un entero para buscar en la serie Fibonacci: ");
  scanf("%d",&numn);
  x=fibonacci(numn);
  printf("%s %d en la serie",x?"Se encontro a":"No se encontro a",numn);
-
+ */
 }
 
 int factorial(int n)
@@ -81,14 +81,18 @@ float potenciar (float x,int n)
  }
 float exponencial (int x, float TOL)
 {float res=TOL, resf=1;
- int n=1;
+ int n=1,fn=0;
+ if (x<0)
+ {x=-x;
+  fn=1;
+ }
  while (res>=TOL)
     {
      res=(potenciar((float)x,n)/factorial(n));
      resf+=res;
      n++;
     }
- return resf;
+ return fn==0?resf:1/resf;
 }
 
 float raizcuadrada(float a,float TOL)
