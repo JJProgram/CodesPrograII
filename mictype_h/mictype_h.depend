@@ -1,9 +1,0 @@
-# depslib dependency file v1.0
-1399157878 source:d:\aplicaciones y programas\proyectos codeblocks\ejspricuatr2014\mictype_h\descmictype.c
-	"mictype.h"
-
-1399157622 d:\aplicaciones y programas\proyectos codeblocks\ejspricuatr2014\mictype_h\mictype.h
-	<stdio.h>
-	<stdlib.h>
-	<ctype.h>
-
