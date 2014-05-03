@@ -1,0 +1,23 @@
+# depslib dependency file v1.0
+1398437720 source:c:\documents and settings\lab4.unlmlab\escritorio\mistring.h\descmi_string.c
+	"mi_string.h"
+
+1398437850 c:\documents and settings\lab4.unlmlab\escritorio\mistring.h\mi_string.h
+	<stdlib.h>
+	<stdio.h>
+
+1398438068 source:c:\documents and settings\lab4.unlmlab\escritorio\mistring.h\main.c
+	"mi_string.h"
+	<string.h>
+
+1399147549 source:d:\aplicaciones y programas\proyectos codeblocks\ejspricuatr2014\mistring.h\main.c
+	"mi_string.h"
+	<string.h>
+
+1399147879 d:\aplicaciones y programas\proyectos codeblocks\ejspricuatr2014\mistring.h\mi_string.h
+	<stdlib.h>
+	<stdio.h>
+
+1399147959 source:d:\aplicaciones y programas\proyectos codeblocks\ejspricuatr2014\mistring.h\descmi_string.c
+	"mi_string.h"
+
