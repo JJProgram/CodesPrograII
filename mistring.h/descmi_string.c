@@ -4,7 +4,6 @@
 
 char * str_chr(const char* cbus,int c)
 {
-    char * caux=cbus;
     while(*cbus&&*cbus!=c)
         cbus++;
     return *cbus==c?cbus:NULL;
