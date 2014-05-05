@@ -22,16 +22,12 @@ int str_cmp (const char* cad1,const char* cad2)
 int str_cmpi(const char* cad1,const char* cad2)
 {
     int a,b;
-    a=aMinusc(*cad1);
-    b=aMinusc(*cad2);
-    while(*cad1&&*cad2&&(a-b)==0)
+    while(*cad1&&*cad2&&!((aMinusc(*cad1))-(aMinusc(*cad2))))
     {
         cad1++;
         cad2++;
-        a=aMinusc(*cad1);
-        b=aMinusc(*cad2);
     }
-    return a-b;
+    return ((aMinusc(*cad1))-(aMinusc(*cad2)));
 }
 
 int str_ncmp(const char* c1, const char* c2,int cmax)
