@@ -20,7 +20,6 @@ int str_cmp (const char* cad1,const char* cad2)
 }
 int str_cmpi(const char* cad1,const char* cad2)
 {
-    int a,b;
     while(*cad1&&*cad2&&!((aMinusc(*cad1))-(aMinusc(*cad2))))
     {
         cad1++;
@@ -40,28 +39,40 @@ int str_ncmp(const char* c1, const char* c2,int cmax)
     return *c1-*c2;
 }
 
-char * str_str (const char* cad,const char* subcad)
+char * str_str (const char* cad, const char* subcad)
 {
-    char *caux=NULL,*subaux=subcad;
-    while(*cad&&*subcad&&!caux)
+    char* caux=cad,*saux=subcad;
+    int largo=0,ccoinc=0;
+    if(!*cad||!*subcad)
+        return NULL;
+    while(*subcad)
     {
-        while(*cad!=*subcad&&*cad)
-            cad++;
+        subcad++;
+        largo++;
+    }
+    subcad=saux;
+    while(caux&&*cad)
+    {
         caux=cad;
-        while(*cad&&*subcad&&*cad==*subcad)
+        while(*cad==*subcad&&ccoinc!=largo&&*cad&&*subcad)
         {
+            ccoinc++;
             cad++;
             subcad++;
+            if(ccoinc==largo)
+                return cad-ccoinc;
+            if(*cad!=*subcad)
+            {
+                cad=caux+1;
+                caux++;
+                ccoinc=0;
+                subcad=saux;
+            }
         }
-        if(*subcad)
-        {
-            caux=NULL;
-            subcad=subaux;
-        }
+        cad++;
     }
-    return caux;
+    return NULL;
 }
-
 char * str_cat (char* cad1,const char* cad2)
 {
     char* aux=cad1;
