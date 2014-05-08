@@ -41,36 +41,22 @@ int str_ncmp(const char* c1, const char* c2,int cmax)
 
 char * str_str (const char* cad, const char* subcad)
 {
-    char* caux=cad,*saux=subcad;
-    int largo=0,ccoinc=0;
-    if(!*cad||!*subcad)
-        return NULL;
-    while(*subcad)
-    {
-        subcad++;
-        largo++;
-    }
-    subcad=saux;
-    while(caux&&*cad)
-    {
-        caux=cad;
-        while(*cad==*subcad&&ccoinc!=largo&&*cad&&*subcad)
+    char * caux=NULL,*saux=subcad;
+    while(*cad)
         {
-            ccoinc++;
-            cad++;
-            subcad++;
-            if(ccoinc==largo)
-                return cad-ccoinc;
-            if(*cad!=*subcad)
+         caux=cad;
+         while(*cad==*subcad&&*subcad)
             {
-                cad=caux+1;
-                caux++;
-                ccoinc=0;
-                subcad=saux;
+             cad++;
+             subcad++;
+            }
+         if(*subcad=='\0')
+            return caux;
+         else
+            {subcad=saux;
+             cad=(caux+1);
             }
         }
-        cad++;
-    }
     return NULL;
 }
 char * str_cat (char* cad1,const char* cad2)
