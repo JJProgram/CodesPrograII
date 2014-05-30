@@ -82,6 +82,7 @@ int sumarPilas(t_pila* pila1,t_pila* pila2,FILE*pfs)
     }
     //printf("La suma es %d\n",suma); linea de testeo
     archivarSuma(suma,pfs);
+    vaciarPila(&pilaauxiliar);
 }
 
 int cargarySumarPilas (void)
@@ -128,5 +129,7 @@ int cargarySumarPilas (void)
     }
     fclose(pf);
     fclose(pfs);
+    vaciarPila(&pila1);
+    vaciarPila(&pila2);
     return 1;
 }
