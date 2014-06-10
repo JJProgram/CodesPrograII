@@ -22,7 +22,7 @@ int main()
             printf("%d ",mat[i][j]);
         printf("\n");
     }
-    mres=mayorSubMat(mat,3,2);
+    mres=mayorSubMat(mat,2,1);
     if(!mres)
     {
         printf("Hubo un problema al intentar realizar la operacion");
@@ -39,12 +39,12 @@ int* crearMatriz(int maxf,int maxc)
 }
 int* mayorSubMat(int m[][TAMC],int di,int dj)
 {
-    int i=0,j=0,iI,iF,jI,jF,*mr;
-    if(di>TAMF||dj>TAMC)
+    int i,j,iI,iF,jI,jF,*mr;
+    if(di>=TAMF||dj>=TAMC)
         return NULL;
-    if(abs(i-di)>=abs(di-TAMF-1))
+    if(di>=abs(di-(TAMF-1)))
     {
-        iI=i;
+        iI=0;
         iF=di;
     }
     else
@@ -52,9 +52,9 @@ int* mayorSubMat(int m[][TAMC],int di,int dj)
         iI=di;
         iF=TAMF-1;
     }
-    if(abs(j-dj)>=abs(dj-TAMC-1))
+    if(dj>=abs(dj-(TAMC-1)))
     {
-        jI=j;
+        jI=0;
         jF=dj;
     }
     else
