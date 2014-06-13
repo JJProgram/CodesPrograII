@@ -31,7 +31,10 @@ int main()
         if(numero<0)
             numero=-numero;
         numeroRes=convertirDec(numero,base);
-        printf("\"%d\" (10) = \"%s\" (%d)\n",numero,numeroRes,base);
+        if(!numeroRes)
+            printf("Hubo un problema al intentar obtener la conversion del numero.\n");
+        else
+            printf("\"%d\" (10) = \"%s\" (%d)\n",numero,numeroRes,base);
         printf("Presione una tecla para continuar...");
         getch();
         system("cls");
@@ -104,6 +107,8 @@ char* convertirDec(int num,int base)
         contdigitos++;
     }
     cfinal=(char*)malloc(sizeof(char)*(contdigitos+1)); //+1 por el \0
+    if(!cfinal)
+        return NULL;
     aux=cfinal;
     while(desapilar(&pila,&resparcial))
     {
