@@ -18,7 +18,7 @@ int selecSimp(void);
 void crearPila(t_pila* );
 int apilar(t_pila* ,t_info* );
 int desapilar (t_pila* ,t_info* );
-char* convertirDec(int ,char );
+char* convertirDec(int ,int );
 int main()
 {
     char *numeroRes;
@@ -81,7 +81,7 @@ int desapilar (t_pila* p,t_info* d)
     free(aux);
     return 1;
 }
-char* convertirDec(int num,char base)
+char* convertirDec(int num,int base)
 {
     const char valNum[]={"0123456789ABCDEF"};
     char* cfinal,*aux;
