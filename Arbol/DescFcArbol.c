@@ -172,8 +172,8 @@ int contaryMostrarHojas(t_arbol* pa)
 }
 int contarNoHojas(t_arbol* pa)
 {
-    if(*pa)
-        return (*pa)->izq==(*pa)->der?0:1+contarNoHojas(&(*pa)->izq)+contarNoHojas(&(*pa)->der);
+    if(*pa) //igual que en ContarHojas, podria usar (*pa)->izq==(*pa)->der pero no es tan claro como esta forma
+        return (*pa)->izq==NULL&&(*pa)->der==NULL?0:1+contarNoHojas(&(*pa)->izq)+contarNoHojas(&(*pa)->der);
     return 0;
 }
 int contarNodosConHijosIzq(t_arbol* pa)
