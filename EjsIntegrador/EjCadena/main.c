@@ -36,13 +36,13 @@ int eliminarOcurrencias(char* cad1,char* cad2)
             pl2++;
         }
     }
-    while(*pl1&&!*pl2)
+    while(*pl1)
     {
         *pe1=*pl1;
         pl1++;
         pe1++;
     }
-    while(!*pl1&&*pl2)
+    while(*pl2)
     {
         *pe2=*pl2;
         pl2++;

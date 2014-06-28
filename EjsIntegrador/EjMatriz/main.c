@@ -9,8 +9,10 @@ int main()
     hay que tener en cuenta que tiene que tener 2 punteros a int para el numero de filas
     y columnas, y que el valor que conserven siga lo enunciado en la logica de traspuesta*/
     int mat[FIL][COL]={{1,2,3},{4,5,6},{7,8,9}};
+    printf("Matriz Original:\n");
     mostrarMat(mat,3,3);
     traspuestaInSituCuadrada(mat,3,3);
+    printf("Matriz Resultante:\n");
     mostrarMat(mat,3,3);
 }
 int traspuestaInSituCuadrada (int m[][COL],int nfilmat,int ncolmat)
@@ -21,8 +23,8 @@ int traspuestaInSituCuadrada (int m[][COL],int nfilmat,int ncolmat)
     int aux,i,j;
     if(nfilmat!=ncolmat)
         return 0; //no es cuadrada.
-    for(i=0;i<nfilmat;i++)
-        for(j=i;j<ncolmat;j++)
+    for(i=0;i<(nfilmat-1);i++)
+        for(j=i+1;j<ncolmat;j++)
         {
             aux=m[i][j];
             m[i][j]=m[j][i];
