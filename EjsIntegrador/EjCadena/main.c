@@ -24,17 +24,13 @@ int eliminarOcurrencias(char* cad1,char* cad2)
         {
             *pe1=*pl1;
             *pe2=*pl2;
-            pl1++;
-            pl2++;
             pe1++;
             pe2++;
         }
         else
-        {
             contCoinc++;
-            pl1++;
-            pl2++;
-        }
+        pl1++;
+        pl2++;
     }
     while(*pl1)
     {
