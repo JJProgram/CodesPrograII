@@ -14,7 +14,7 @@ char* str_cpy(char* c1,const char* c2)
 }
 Auto::Auto()
 {
-    str_cpy(modelo,"***");
+    str_cpy(modelo,"***"); //revisar esto
     str_cpy(marca,"*******");
     precio=0;
     anio=2014;
