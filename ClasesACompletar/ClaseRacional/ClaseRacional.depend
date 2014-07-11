@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1404944307 source:d:\aplicaciones y programas\proyectos codeblocks\ejspricuatr2014\clases\claseracional\main.cpp
+	<iostream>
+	"Racional.h"
+
+1404967440 d:\aplicaciones y programas\proyectos codeblocks\ejspricuatr2014\clases\claseracional\racional.h
+	<iostream>
+
+1404967463 source:d:\aplicaciones y programas\proyectos codeblocks\ejspricuatr2014\clases\claseracional\racional.cpp
+	<iostream>
+	"Racional.h"
+
