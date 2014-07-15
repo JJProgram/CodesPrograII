@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1405465618 source:d:\aplicaciones y programas\proyectos codeblocks\ejspricuatr2014\ejsparcial2\ejercicio1colaarbol\descfcejercicio.c
+	"FcEjercicio.h"
+
+1405462890 d:\aplicaciones y programas\proyectos codeblocks\ejspricuatr2014\ejsparcial2\ejercicio1colaarbol\fcejercicio.h
+	<stdio.h>
+	<stdlib.h>
+
+1405465564 source:d:\aplicaciones y programas\proyectos codeblocks\ejspricuatr2014\ejsparcial2\ejercicio1colaarbol\main.c
+	"FcEjercicio.h"
+
