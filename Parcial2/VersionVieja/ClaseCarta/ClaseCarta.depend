@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1405513360 source:c:\documents and settings\lab4.unlmlab\escritorio\palopoli - juan jose\clasecarta\carta.cpp
+	"Carta.h"
+
+1405513348 c:\documents and settings\lab4.unlmlab\escritorio\palopoli - juan jose\clasecarta\carta.h
+	<iostream>
+	<string.h>
+
+1405513853 source:c:\documents and settings\lab4.unlmlab\escritorio\palopoli - juan jose\clasecarta\main.cpp
+	<iostream>
+	"Carta.h"
+

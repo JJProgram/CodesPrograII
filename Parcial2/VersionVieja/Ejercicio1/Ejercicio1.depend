@@ -1,0 +1,21 @@
+# depslib dependency file v1.0
+1405524832 source:c:\documents and settings\lab4.unlmlab\escritorio\palopoli - juan jose\ejercicio1\descfcejercicio.c
+	"FcEjercicio.h"
+
+1405525363 c:\documents and settings\lab4.unlmlab\escritorio\palopoli - juan jose\ejercicio1\fcejercicio.h
+	<stdio.h>
+	<stdlib.h>
+
+1405525307 source:c:\documents and settings\lab4.unlmlab\escritorio\palopoli - juan jose\ejercicio1\main.c
+	"FcEjercicio.h"
+
+1405525658 source:c:\documents and settings\administrador\escritorio\palopoli - juan jose 2\ejercicio1\descfcejercicio.c
+	"FcEjercicio.h"
+
+1405525364 c:\documents and settings\administrador\escritorio\palopoli - juan jose 2\ejercicio1\fcejercicio.h
+	<stdio.h>
+	<stdlib.h>
+
+1405525590 source:c:\documents and settings\administrador\escritorio\palopoli - juan jose 2\ejercicio1\main.c
+	"FcEjercicio.h"
+
