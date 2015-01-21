@@ -78,15 +78,16 @@ char * str_cat (char* cad1,const char* cad2)
 
 char * str_cpy (char* cad1,const char* cad2)
 {
-    char* aux=cad1;
-    while(*cad2)
+     char *auxCad1=cad1;
+     while (*(cad2)!='\0')
     {
-        *cad1=*cad2;
+        *(cad1)=*(cad2);
         cad1++;
         cad2++;
     }
-    *cad1='\0';
-    return aux;
+    *(cad1)='\0';
+    return auxCad1;
+
 }
 
 int str_len (const char* cad)
